@@ -5,6 +5,7 @@ import { ScheduleSection } from "@/components/layout/schedule-section";
 import { TestimonialsSection } from "@/components/layout/testimonials-section";
 import { NewsSection } from "@/components/layout/news-section";
 import { ContactCTASection } from "@/components/layout/contact-cta-section";
+import { BackToTop } from "@/components/common/backToTop";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TestimonialsSection />
       <NewsSection />
       <ContactCTASection />
+      <BackToTop />
     </>
   );
 }
