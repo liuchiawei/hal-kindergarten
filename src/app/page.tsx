@@ -1,9 +1,21 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/layout/hero-section";
+import { AboutSection } from "@/components/layout/about-section";
+import { ProgramsSection } from "@/components/layout/programs-section";
+import { ScheduleSection } from "@/components/layout/schedule-section";
+import { TestimonialsSection } from "@/components/layout/testimonials-section";
+import { NewsSection } from "@/components/layout/news-section";
+import { ContactCTASection } from "@/components/layout/contact-cta-section";
 
 export default function Home() {
   return (
-    <div>
-      <h1>ハル幼稚園</h1>
-    </div>
+    <>
+      <HeroSection />
+      <AboutSection />
+      <ProgramsSection />
+      <ScheduleSection />
+      <TestimonialsSection />
+      <NewsSection />
+      <ContactCTASection />
+    </>
   );
 }
