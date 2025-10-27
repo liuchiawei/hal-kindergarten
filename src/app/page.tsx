@@ -6,10 +6,14 @@ import { TestimonialsSection } from "@/components/layout/testimonials-section";
 import { NewsSection } from "@/components/layout/news-section";
 import { ContactCTASection } from "@/components/layout/contact-cta-section";
 import { BackToTop } from "@/components/common/backToTop";
+import DomeGallery from "@/components/common/DomeGallery";
 
 export default function Home() {
   return (
     <>
+      <div className="relative h-screen bg-gray-500">
+        <DomeGallery />
+      </div>
       <HeroSection />
       <AboutSection />
       <ProgramsSection />
