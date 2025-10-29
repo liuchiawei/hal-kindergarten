@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "items": [
+      { "label": "Home", "ariaLabel": "Go to home page", "link": "/" },
+      { "label": "About", "ariaLabel": "Learn about us", "link": "/about" },
+      {
+        "label": "Services",
+        "ariaLabel": "View our services",
+        "link": "/services"
+      },
+      { "label": "Contact", "ariaLabel": "Get in touch", "link": "/contact" }
+    ]
+  },
+  "footer": {
+    "title": "ハル幼稚園",
+    "description": "子どもたちの笑顔があふれる場所。遊びを通して学び、成長する毎日を提供します。",
+    "quickLinks": {
+      "title": "クイックリンク",
+      "items": [
+        { "label": "ホーム", "link": "/" },
+        { "label": "園について", "link": "/about" },
+        { "label": "教育内容", "link": "/programs" },
+        { "label": "入園案内", "link": "/admissions" },
+        { "label": "お知らせ", "link": "/news" },
+        { "label": "お問い合わせ", "link": "/contact" }
+      ]
+    },
+    "contact": {
+      "title": "お問合せ・資料請求",
+      "items": [
+        {
+          "label": "TEL",
+          "content": ["03-3344-1010"],
+          "icon": "Phone"
+        },
+        {
+          "label": "MAIL",
+          "content": ["info@hal-kindergarten.jp"],
+          "icon": "Mail"
+        },
+        {
+          "label": "ADDRESS",
+          "content": ["〒160-0023", "東京都新宿区西新宿1-7-3"],
+          "icon": "MapPin"
+        }
+      ]
+    },
+    "copyright": {
+      "text": "ハル幼稚園. All rights reserved."
+    }
+  },
+  "contact": {
+    "title": "お問合せ・資料請求",
+    "description": "パンフレットご希望の方は郵送させていただきます",
+    "phone": "03-3344-1010",
+    "address": "〒160-0023 東京都新宿区西新宿1-7-3",
+    "buttons": [
+      {
+        "label": "お問い合わせ",
+        "tooltip": "お電話にてご請求の方",
+        "link": "/contact",
+        "icon": "Phone"
+      },
+      {
+        "label": "資料請求",
+        "tooltip": "ホームページでご請求",
+        "link": "/request",
+        "icon": "Mail"
+      }
+    ]
+  }
+}

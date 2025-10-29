@@ -1,4 +1,5 @@
 import { BackToTop } from "@/components/common/backToTop";
+import Nav from "@/components/layout/nav";
 import DomeGallery from "@/components/common/DomeGallery";
 import About from "@/components/layout/about";
 import Features from "@/components/layout/features";
@@ -10,6 +11,7 @@ import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
     <>
+      <Nav />
       <div className="relative h-screen bg-gray-500">
         <DomeGallery />
       </div>
