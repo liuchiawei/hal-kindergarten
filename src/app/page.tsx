@@ -1,12 +1,11 @@
-import { HeroSection } from "@/components/layout/hero-section";
-import { AboutSection } from "@/components/layout/about-section";
-import { ProgramsSection } from "@/components/layout/programs-section";
-import { ScheduleSection } from "@/components/layout/schedule-section";
-import { TestimonialsSection } from "@/components/layout/testimonials-section";
-import { NewsSection } from "@/components/layout/news-section";
-import { ContactCTASection } from "@/components/layout/contact-cta-section";
 import { BackToTop } from "@/components/common/backToTop";
 import DomeGallery from "@/components/common/DomeGallery";
+import About from "@/components/layout/about";
+import Features from "@/components/layout/features";
+import Facility from "@/components/layout/facility";
+import Service from "@/components/layout/service";
+import News from "@/components/layout/news";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -14,13 +13,12 @@ export default function Home() {
       <div className="relative h-screen bg-gray-500">
         <DomeGallery />
       </div>
-      <HeroSection />
-      <AboutSection />
-      <ProgramsSection />
-      <ScheduleSection />
-      <TestimonialsSection />
-      <NewsSection />
-      <ContactCTASection />
+      <About />
+      <Features />
+      <Facility />
+      <Service />
+      <News />
+      <Footer />
       <BackToTop />
     </>
   );
