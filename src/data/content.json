@@ -1,14 +1,39 @@
 {
   "nav": {
     "items": [
-      { "label": "Home", "ariaLabel": "Go to home page", "link": "/" },
-      { "label": "About", "ariaLabel": "Learn about us", "link": "/about" },
+      { "label": "園からのお知らせ", "ariaLabel": "ハル幼稚園からのお知らせページ", "link": "/" },
+      { "label": "新園舎ニュース", "ariaLabel": "新建設中の園舎についての情報ページ", "link": "/" },
+      { "label": "今日の幼稚園", "ariaLabel": "定期実施の幼稚園活動の紹介ページ（。お遊戯、見学会の紹介など）", "link": "/" },
+      { "label": "幼稚園での生活", "ariaLabel": "一日、一年、バス通園など子どもたちの園での生活の様子を紹介するページ", "link": "/" },
+      { "label": "展覧会・コンクール作品紹介", "ariaLabel": "コンクールなどに出展した子ども達の作品を紹介するページ", "link": "/" },
+      { "label": "ハル幼稚園の教育", "ariaLabel": "保育方針を始め、ハル幼稚園における教育理念を紹介するページ", "link": "/" },
+      { "label": "ハル幼稚園について", "ariaLabel": "園長の挨拶、園の魅力などを紹介するページ", "link": "/" }
+    ]
+  },
+  "facility": {
+    "title": "子どもたちにも大人気☆待望の新園舎が完成しました！",
+    "subtitle": "子どもたちにも大人気☆待望の新園舎が完成しました！",
+    "items": [
       {
-        "label": "Services",
-        "ariaLabel": "View our services",
-        "link": "/services"
+        "icon": "Building2",
+        "title": "新園舎は広くてすてき！！",
+        "description": "子供達も毎日、きれいな設備で快適に過ごしています。"
       },
-      { "label": "Contact", "ariaLabel": "Get in touch", "link": "/contact" }
+      {
+        "icon": "Sun",
+        "title": "中庭からの明るい陽射し",
+        "description": "子供達はちょっとした時間にも、中庭の遊具で上靴のまま遊べるので楽しそうです。"
+      },
+      {
+        "icon": "Users",
+        "title": "行事は人数制限一切なし",
+        "description": "また、参観や音楽会、おゆうぎ会、展覧会など、幼稚園での行事は人数制限一切なしで行えるようになりました。"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "生き生きと楽しむ子供達",
+        "description": "子供達の生き生きと楽しんでいる様子をたくさんの方にご覧いただきたいと思います！！"
+      }
     ]
   },
   "footer": {
