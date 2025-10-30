@@ -92,7 +92,6 @@ const DEFAULT_IMAGES: ImageItem[] = [
     src: "/images/17.jpg",
     alt: "Contemporary art",
   },
-
 ];
 
 const DEFAULTS = {
@@ -897,11 +896,11 @@ export default function DomeGallery({
           }}
         >
           <div className="stage">
-            <div ref={sphereRef} className="sphere">
+            <div ref={sphereRef} className="sphere cursor-grab active:cursor-grabbing">
               {items.map((it, i) => (
                 <div
                   key={`${it.x},${it.y},${i}`}
-                  className="sphere-item absolute m-auto"
+                  className="sphere-item group absolute m-auto transition-all hover:scale-[1.01]"
                   data-src={it.src}
                   data-alt={it.alt}
                   data-offset-x={it.x}
@@ -922,7 +921,7 @@ export default function DomeGallery({
                   }
                 >
                   <div
-                    className="item__image absolute block overflow-hidden cursor-pointer bg-gray-200 transition-transform duration-300"
+                    className="item__image absolute block overflow-hidden cursor-pointer bg-gray-200 transition-all duration-300 group-hover:shadow-lg"
                     role="button"
                     tabIndex={0}
                     aria-label={it.alt || "Open image"}
