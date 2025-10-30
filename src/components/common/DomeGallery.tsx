@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useCallback } from "react";
 import { useGesture } from "@use-gesture/react";
+import Image from "next/image";
 
 type ImageItem = string | { src: string; alt?: string };
 
@@ -951,7 +952,7 @@ export default function DomeGallery({
                       backfaceVisibility: "hidden",
                     }}
                   >
-                    <img
+                    <Image
                       src={it.src}
                       draggable={false}
                       alt={it.alt}
@@ -962,6 +963,8 @@ export default function DomeGallery({
                           grayscale ? "grayscale(1)" : "none"
                         })`,
                       }}
+                      width={400}
+                      height={400}
                     />
                   </div>
                 </div>
