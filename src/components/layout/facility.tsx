@@ -63,7 +63,7 @@ export default function Facility() {
         </motion.div>
       </div>
       <div className="absolute inset-0 w-full h-full min-h-screen">
-        <DomeGallery fit={2} />
+        <DomeGallery fit={2} grayscale={false} />
       </div>
     </section>
   );
