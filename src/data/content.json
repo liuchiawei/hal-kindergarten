@@ -1,13 +1,48 @@
 {
   "nav": {
     "items": [
-      { "label": "園からのお知らせ", "ariaLabel": "ハル幼稚園からのお知らせページ", "link": "/" },
-      { "label": "新園舎ニュース", "ariaLabel": "新建設中の園舎についての情報ページ", "link": "/" },
-      { "label": "今日の幼稚園", "ariaLabel": "定期実施の幼稚園活動の紹介ページ（。お遊戯、見学会の紹介など）", "link": "/" },
-      { "label": "幼稚園での生活", "ariaLabel": "一日、一年、バス通園など子どもたちの園での生活の様子を紹介するページ", "link": "/" },
-      { "label": "展覧会・コンクール作品紹介", "ariaLabel": "コンクールなどに出展した子ども達の作品を紹介するページ", "link": "/" },
-      { "label": "ハル幼稚園の教育", "ariaLabel": "保育方針を始め、ハル幼稚園における教育理念を紹介するページ", "link": "/" },
-      { "label": "ハル幼稚園について", "ariaLabel": "園長の挨拶、園の魅力などを紹介するページ", "link": "/" }
+      {
+        "label": "News",
+        "subLabel": "お知らせ",
+        "ariaLabel": "ハル幼稚園からのお知らせページ",
+        "link": "/"
+      },
+      {
+        "label": "New campus",
+        "subLabel": "新園舎ニュース",
+        "ariaLabel": "新建設中の園舎についての情報ページ",
+        "link": "/"
+      },
+      {
+        "label": "Today's HAL",
+        "subLabel": "今日のHAL",
+        "ariaLabel": "定期実施の幼稚園活動の紹介ページ（。お遊戯、見学会の紹介など）",
+        "link": "/"
+      },
+      {
+        "label": "Life at HAL",
+        "subLabel": "幼稚園での生活",
+        "ariaLabel": "一日、一年、バス通園など子どもたちの園での生活の様子を紹介するページ",
+        "link": "/"
+      },
+      {
+        "label": "Exhibitions & Contest",
+        "subLabel": "展覧会・コンクール作品紹介",
+        "ariaLabel": "コンクールなどに出展した子ども達の作品を紹介するページ",
+        "link": "/"
+      },
+      {
+        "label": "Education",
+        "subLabel": "ハル幼稚園の教育",
+        "ariaLabel": "保育方針を始め、ハル幼稚園における教育理念を紹介するページ",
+        "link": "/"
+      },
+      {
+        "label": "About",
+        "subLabel": "ハル幼稚園について",
+        "ariaLabel": "園長の挨拶、園の魅力などを紹介するページ",
+        "link": "/"
+      }
     ]
   },
   "facility": {
