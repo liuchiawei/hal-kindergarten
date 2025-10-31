@@ -15,6 +15,7 @@ export default function Nav() {
       changeMenuColorOnOpen={true}
       colors={["#B19EEF", "#5227FF"]}
       accentColor="#ff6b6b"
+      itemWrapClassName="p-2 after:bg-black"
       onMenuOpen={() => console.log("Menu opened")}
       onMenuClose={() => console.log("Menu closed")}
     />

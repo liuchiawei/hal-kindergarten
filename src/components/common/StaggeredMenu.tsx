@@ -3,6 +3,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
+import { cn } from "@/lib/utils";
 
 export interface StaggeredMenuItem {
   label: string;
@@ -27,6 +28,7 @@ export interface StaggeredMenuProps {
   accentColor?: string;
   isFixed?: boolean;
   changeMenuColorOnOpen?: boolean;
+  itemWrapClassName?: string;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
 }
@@ -44,6 +46,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   changeMenuColorOnOpen = true,
   accentColor = "#5227FF",
   isFixed = true,
+  itemWrapClassName = "",
   onMenuOpen,
   onMenuClose,
 }: StaggeredMenuProps) => {
@@ -500,28 +503,31 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 w-full max-w-lg h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-40 backdrop-blur-[12px] pointer-events-auto"
+          className="staggered-menu-panel absolute top-0 right-0 w-full max-w-lg h-full pr-4 bg-white flex flex-col overflow-y-auto z-40 backdrop-blur-[12px] pointer-events-auto"
           style={{ WebkitBackdropFilter: "blur(12px)" }}
           aria-hidden={!open}
         >
           <div className="sm-panel-inner flex-1 flex flex-col gap-5">
             <ul
-              className="sm-panel-list list-none m-0 p-0 flex flex-col gap-2"
+              className="sm-panel-list list-none flex flex-col"
               role="list"
               data-numbering={displayItemNumbering || undefined}
             >
               {items && items.length ? (
                 items.map((it, idx) => (
                   <li
-                    className="sm-panel-itemWrap relative overflow-hidden leading-none"
+                    className={cn(
+                      "sm-panel-itemWrap relative group overflow-hidden leading-none before:content-[attr(data-sub-label)] before:absolute before:left-full hover:before:left-2 before:bottom-1 md:before:bottom-2 lg:before:bottom-4 before:opacity-0 before:text-sm md:before:text-lg before:font-bold before:text-white before:text-right before:tracking-wide hover:before:opacity-100 before:transition-all before:duration-200 before:z-10 before:leading-none after:content-[''] after:absolute after:left-full after:top-0 after:bottom-0 after:right-0 after:bg-black after:opacity-0 after:transition-all after:duration-200 after:ease-linear hover:after:opacity-100 hover:after:left-0 after:-z-10",
+                      itemWrapClassName
+                    )}
+                    data-sub-label={it.subLabel}
                     key={it.label + idx}
                   >
                     <Link
-                      className="sm-panel-item group relative text-black cursor-pointer leading-none tracking-[-2px] uppercase transition-all inline-block no-underline pr-10 before:content-[attr(data-sub-label)] before:absolute before:left-full before:bottom-0 md:before:bottom-2 lg:before:bottom-4 before:w-full before:opacity-0 before:text-sm md:before:text-lg before:font-bold before:text-black before:text-right before:tracking-wide hover:before:left-0 hover:before:opacity-100 before:transition-all before:duration-200 before:z-10 before:leading-none"
+                      className="sm-panel-item relative text-black cursor-pointer leading-none tracking-[-2px] uppercase transition-all inline-block no-underline pl-2 pr-12"
                       href={it.link}
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}
-                      data-sub-label={it.subLabel}
                     >
                       <span className="sm-panel-itemLabel inline-block font-black text-4xl md:text-[3.6em] [transform-origin:50%_100%] will-change-transform transition-all">
                         {it.label}
