@@ -455,7 +455,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
         <button
           ref={toggleBtnRef}
-          className={`sm-toggle staggered-menu-header absolute top-6 right-6 z-50 inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto text-shadow-sm drop-shadow-md ${
+          className={`sm-toggle staggered-menu-header absolute top-6 right-6 z-50 inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto drop-shadow-md hover:*:text-accent ${
             open ? "text-black" : "text-[#e9e9ef]"
           }`}
           aria-label={open ? "Close menu" : "Open menu"}
@@ -503,7 +503,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 w-full max-w-lg h-full pr-4 bg-white flex flex-col overflow-y-auto z-40 backdrop-blur-[12px] pointer-events-auto"
+          className="staggered-menu-panel absolute top-0 right-0 w-full max-w-lg h-full pr-4 bg-stone-100 flex flex-col overflow-y-auto z-40 backdrop-blur-[12px] pointer-events-auto"
           style={{ WebkitBackdropFilter: "blur(12px)" }}
           aria-hidden={!open}
         >
@@ -517,7 +517,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 items.map((it, idx) => (
                   <li
                     className={cn(
-                      "sm-panel-itemWrap relative group overflow-hidden leading-none before:content-[attr(data-sub-label)] before:absolute before:left-full hover:before:left-2 before:bottom-1 md:before:bottom-2 lg:before:bottom-4 before:opacity-0 before:text-sm md:before:text-lg before:font-bold before:text-white before:text-right before:tracking-wide hover:before:opacity-100 before:transition-all before:duration-200 before:z-10 before:leading-none after:content-[''] after:absolute after:left-full after:top-0 after:bottom-0 after:right-0 after:bg-black after:opacity-0 after:transition-all after:duration-200 after:ease-linear hover:after:opacity-100 hover:after:left-0 after:-z-10",
+                      "sm-panel-itemWrap relative group overflow-hidden leading-none before:content-[attr(data-sub-label)] before:absolute before:left-full hover:before:left-2 md:hover:before:left-4 before:top-1/2 before:-translate-y-1/2 before:opacity-0 before:text-sm md:before:text-2xl before:font-semibold before:text-stone-100 before:text-shadow-md before:tracking-wide hover:before:opacity-100 before:transition-all before:duration-200 before:z-10 before:leading-none before:pointer-events-none after:content-[''] after:absolute after:left-full after:top-0 after:bottom-0 after:right-0 after:bg-black after:opacity-0 after:transition-all after:duration-200 after:ease-linear hover:after:opacity-100 hover:after:left-0 after:-z-10",
                       itemWrapClassName
                     )}
                     data-sub-label={it.subLabel}
@@ -529,7 +529,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}
                     >
-                      <span className="sm-panel-itemLabel inline-block font-black text-4xl md:text-[3.6em] [transform-origin:50%_100%] will-change-transform transition-all">
+                      <span className="sm-panel-itemLabel inline-block font-black text-4xl md:text-[3.6em] [transform-origin:50%_100%] will-change-transform transition-all group-hover:text-accent/50">
                         {it.label}
                       </span>
                     </Link>
@@ -604,7 +604,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-socials-link { font-size: 1.2rem; font-weight: 500; color: #111; text-decoration: none; position: relative; padding: 2px 0; display: inline-block; transition: color 0.3s ease, opacity 0.3s ease; }
 .sm-scope .sm-socials-link:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-title { margin: 0; font-size: 1rem; font-weight: 600; color: #fff; text-transform: uppercase; }
-.sm-scope .sm-panel-item:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
 .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 0; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
       `}</style>

@@ -11,11 +11,11 @@ export default function Nav() {
       displaySocials={false}
       displayItemNumbering={true}
       menuButtonColor="#fff"
-      openMenuButtonColor="#fff"
+      openMenuButtonColor="#154034"
       changeMenuColorOnOpen={true}
-      colors={["#B19EEF", "#5227FF"]}
-      accentColor="#ff6b6b"
-      itemWrapClassName="p-2 after:bg-black"
+      colors={["#5BA660", "#1B593C"]}
+      accentColor="#F2D06B"
+      itemWrapClassName="p-2 after:bg-primary"
       onMenuOpen={() => console.log("Menu opened")}
       onMenuClose={() => console.log("Menu closed")}
     />
