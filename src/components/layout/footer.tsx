@@ -14,7 +14,7 @@ import content from "@/data/content.json";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-sky-600 via-blue-600 to-purple-600 text-white">
+    <footer className="bg-gradient-to-br from-primary to-secondary text-white">
       {/* Contact CTA Section */}
       <section className="py-16 px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -59,12 +59,12 @@ export default function Footer() {
                       <TooltipTrigger asChild>
                         <Button
                           size="lg"
-                          className="bg-white text-sky-700 hover:bg-sky-50 px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+                          className="group bg-white text-primary hover:bg-light hover:text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto flex items-center gap-2 cursor-pointer"
                         >
                           {button.icon === "Phone" ? (
-                            <Phone className="mr-2 size-5" />
+                            <Phone className="size-4 rotate-135 group-hover:rotate-0 transition-all" />
                           ) : (
-                            <Mail className="mr-2 size-5" />
+                            <Mail className="size-4 group-hover:-translate-y-1 transition-all" />
                           )}
                           {button.label}
                         </Button>
