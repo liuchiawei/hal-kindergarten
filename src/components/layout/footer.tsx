@@ -84,19 +84,21 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-white/20 py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8 **:data-[section=title]:text-accent **:data-[section=title]:text-xl **:data-[section=title]:font-bold **:data-[section=title]:mb-4 **:data-[section=description]:text-background **:data-[section=description]:text-sm **:data-[section=description]:space-y-2">
             <div>
-              <h3 className="text-xl font-bold mb-4">{content.footer.title}</h3>
-              <p className="text-sky-100 text-sm">
+              <h3 data-section="title">
+                {content.footer.title}
+              </h3>
+              <p data-section="description">
                 {content.footer.description}
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">
+              <h4 data-section="title">
                 {content.footer.quickLinks.title}
               </h4>
-              <ul className="space-y-2 text-sm text-sky-100">
+              <ul data-section="description" className="space-y-2 text-sm text-sky-100">
                 {content.footer.quickLinks.items.map(
                   (item: { label: string; link: string }) => (
                     <li key={item.label}>
@@ -113,10 +115,10 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">
+              <h4 data-section="title">
                 {content.footer.contact.title}
               </h4>
-              <ul className="space-y-2 text-sm text-sky-100">
+              <ul data-section="description">
                 {content.footer.contact.items.map(
                   (item: {
                     label: string;
