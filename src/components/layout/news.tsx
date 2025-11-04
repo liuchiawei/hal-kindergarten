@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Calendar, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselItem,
+  CarouselContent,
+  CarouselPrevious,
+  CarouselNext,
+} from "../ui/carousel";
 
 const newsItems = [
   {
@@ -33,87 +38,63 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-white to-sky-50">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-sky-700">
-            お知らせ・ブログ
-          </h2>
+    <section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary to-secondary overflow-hidden">
+      <div className="flex flex-col items-center justify-center gap-2 mb-8">
+        <h2 className="text-xl md:text-2xl font-black text-center text-accent tracking-widest">
+          NEWS
+        </h2>
+        <h1 className="text-3xl md:text-4xl font-[400] text-center text-background tracking-wider">
+          更新情報
+        </h1>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            {newsItems.map((item, index) => (
-              <motion.article
-                key={index}
+      <Carousel className="max-w-5xl mx-auto cursor-grab active:cursor-grabbing">
+        <CarouselContent>
+          {newsItems.map((item, index) => (
+            <CarouselItem
+              key={item.date}
+              className="basis-1/2 lg:basis-1/3 py-2"
+            >
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{
                   type: "spring",
                   stiffness: 100,
-                  delay: index * 0.1
+                  delay: index * 0.125,
                 }}
-                whileHover={{
-                  y: -4,
-                  transition: { type: "spring", stiffness: 300 }
-                }}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden cursor-pointer"
+                className="flex flex-col h-full min-h-72 rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="h-48 bg-gradient-to-br from-sky-100 to-blue-100 flex items-center justify-center">
-                  <div className="text-sky-300">
-                    <Calendar className="w-20 h-20" />
-                  </div>
+                <div
+                  className={`w-full h-full p-6 flex items-end bg-background bg-cover bg-center ${
+                    index === 0
+                      ? "bg-[image:url('/images/01.jpg')]"
+                      : index === 1
+                      ? "bg-[image:url('/images/02.jpg')]"
+                      : index === 2
+                      ? "bg-[image:url('/images/03.jpg')]"
+                      : "bg-[image:url('/images/04.jpg')]"
+                  }`}
+                >
+                  <h6 className="text-background text-sm md:text-lg font-semibold text-shadow-lg">
+                    {item.date}
+                  </h6>
                 </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <time className="text-sm text-gray-500 flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {item.date}
-                    </time>
-                    <span className="text-xs px-3 py-1 bg-sky-100 text-sky-700 rounded-full font-semibold">
-                      {item.category}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
+                <div className="p-6 h-full bg-background">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     {item.title}
                   </h3>
-
-                  <p className="text-gray-600 text-sm line-clamp-2 mb-4">
+                  <p className="text-foreground text-xs md:text-sm">
                     {item.excerpt}
                   </p>
-
-                  <div className="flex items-center text-sky-600 text-sm font-semibold group">
-                    <span>続きを読む</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
                 </div>
-              </motion.article>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="text-center"
-          >
-            <Button
-              size="lg"
-              className="bg-sky-600 hover:bg-sky-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
-            >
-              もっと見る
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </motion.div>
-        </motion.div>
-      </div>
+              </motion.div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 }
