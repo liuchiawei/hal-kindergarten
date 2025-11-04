@@ -23,6 +23,14 @@ export default function Hero() {
           </motion.span>
         ))}
       </h1>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.6 }}
+        className="absolute bottom-1/5 left-1/2 -translate-x-1/2 text-center text-white text-shadow-md text-shadow-primary text-md md:text-xl tracking-widest select-none"
+      >
+        {content.hero.catchphrase}
+      </motion.h2>
     </header>
   );
 }
