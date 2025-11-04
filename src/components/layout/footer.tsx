@@ -139,7 +139,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="text-center text-sm text-sky-100 pt-8 border-t border-white/20">
+          <div className="text-center text-sm text-accent/80 pt-8 border-t border-white/20">
             <p>
               &copy; {new Date().getFullYear()} {content.footer.copyright.text}
             </p>
