@@ -5,7 +5,7 @@ import content from "@/data/content.json";
 
 export default function About() {
   return (
-    <section className="min-h-screen h-full w-full flex flex-col-reverse md:flex-row relative overflow-hidden">
+    <section className="min-h-screen h-[120vh] md:h-full w-full flex flex-col-reverse md:flex-row relative overflow-hidden">
       <div className="p-2 md:p-6 absolute top-0 md:right-0 z-10 *:text-shadow-lg *:text-shadow-primary/50 md:[writing-mode:vertical-lr]">
         <motion.h6
           initial={{ opacity: 0, y: -20 }}
