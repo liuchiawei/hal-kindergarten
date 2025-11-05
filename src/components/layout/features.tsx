@@ -45,7 +45,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="h-full min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden">
+    <section className="h-[120vh] md:h-full min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden">
       <div className="p-2 md:p-6 absolute top-0 z-10 *:text-shadow-lg *:text-shadow-primary/50 md:[writing-mode:vertical-lr]">
         <motion.h6
           initial={{ opacity: 0, y: -20 }}
