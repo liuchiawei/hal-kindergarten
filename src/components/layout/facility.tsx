@@ -7,8 +7,8 @@ import content from "@/data/content.json";
 
 export default function Facility() {
   return (
-    <section className="relative bg-gradient-to-br from-primary to-secondary h-full min-h-screen overflow-hidden">
-      <div className="w-full h-full px-4 md:px-0 py-4 md:py-12 flex flex-col justify-center items-center relative z-10 pointer-events-none">
+    <section className="relative bg-gradient-to-br from-primary to-secondary h-full min-h-screen flex flex-col justify-center items-center overflow-hidden">
+      <div className="w-full h-full px-4 md:px-0 flex flex-col justify-center items-center relative z-10 pointer-events-none">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
